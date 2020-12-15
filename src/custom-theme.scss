@@ -14,16 +14,7 @@
 // hue. Available color palettes: https://material.io/design/color/
 $GameLibrary-light-primary: mat-palette($mat-blue, 600);
 $GameLibrary-light-accent: mat-palette($mat-orange, A400, A100, A700);
-
-$GameLibrary-dark-primary: mat-palette($mat-blue, 900);
-$GameLibrary-dark-accent: mat-palette($mat-orange, A400, A200, A700);
-$GameLibrary-dark-background: map_get($mat-blue-grey, 100);
-
-// The warn palette is optional (defaults to red).
 $GameLibrary-light-warn: mat-palette($mat-red);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
 $GameLibrary-theme: mat-light-theme((
   color: (
     primary: $GameLibrary-light-primary,
@@ -32,6 +23,11 @@ $GameLibrary-theme: mat-light-theme((
   )
 ));
 
+
+// Dark theme
+$GameLibrary-dark-primary: mat-palette($mat-blue, 900);
+$GameLibrary-dark-accent: mat-palette($mat-orange, A400, A200, A700);
+$GameLibrary-dark-background: map_get($mat-blue-grey, 100);
 $GameLibrary-theme-dark: mat-dark-theme((
   color: (
     primary: $GameLibrary-dark-primary,
@@ -41,17 +37,16 @@ $GameLibrary-theme-dark: mat-dark-theme((
 ));
 
 //Custom background color
-$background: map-get($GameLibrary-theme-dark, background);
-$background: map_merge($background, (background:$GameLibrary-dark-background));
-$GameLibrary-theme-dark: map_merge($GameLibrary-theme-dark, (background:$background));
+// $background: map-get($GameLibrary-theme-dark, background);
+// $background: map_merge($background, (background:$GameLibrary-dark-background));
+// $GameLibrary-theme-dark: map_merge($GameLibrary-theme-dark, (background:$background));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 
-.theme-light{
-  @include angular-material-theme($GameLibrary-theme);
-}
+@include angular-material-theme($GameLibrary-theme);
+
 .theme-dark{
   @include angular-material-theme($GameLibrary-theme-dark);
 }
