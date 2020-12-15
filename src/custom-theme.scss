@@ -12,28 +12,26 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$GameLibrary-light-primary: mat-palette($mat-blue, 600);
-$GameLibrary-light-accent: mat-palette($mat-orange, A400, A100, A700);
-$GameLibrary-light-warn: mat-palette($mat-red);
-$GameLibrary-theme: mat-light-theme((
+$light-primary: mat-palette($mat-blue, 600);
+$light-accent: mat-palette($mat-orange, A400, A100, A700);
+$light-warn: mat-palette($mat-red);
+$theme: mat-light-theme((
   color: (
-    primary: $GameLibrary-light-primary,
-    accent: $GameLibrary-light-accent,
-    warn: $GameLibrary-light-warn,
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
   )
 ));
 
-// Possible fix
-
 // Dark theme
-$GameLibrary-dark-primary: mat-palette($mat-blue, 900);
-$GameLibrary-dark-accent: mat-palette($mat-orange, A400, A200, A700);
-$GameLibrary-dark-background: map_get($mat-blue-grey, 100);
-$GameLibrary-theme-dark: mat-dark-theme((
+$dark-primary: mat-palette($mat-blue, 900);
+$dark-accent: mat-palette($mat-orange, A400, A200, A700);
+// $GameLibrary-dark-background: map_get($mat-blue-grey, 100);
+$theme-dark: mat-dark-theme((
   color: (
-    primary: $GameLibrary-dark-primary,
-    accent: $GameLibrary-dark-accent,
-    warn: $GameLibrary-light-warn,
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $light-warn,
   )
 ));
 
@@ -46,8 +44,8 @@ $GameLibrary-theme-dark: mat-dark-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 
-@include angular-material-theme($GameLibrary-theme);
+@include angular-material-theme($theme);
 
 .theme-dark{
-  @include angular-material-color($GameLibrary-theme-dark);
+  @include angular-material-color($theme-dark);
 }
