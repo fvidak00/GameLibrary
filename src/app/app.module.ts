@@ -7,16 +7,19 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { GridviewComponent } from './gridview/gridview.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    GridviewComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { HeaderComponent } from './header/header.component';
     MatSlideToggleModule,
     MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

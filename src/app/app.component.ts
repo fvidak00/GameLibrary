@@ -13,11 +13,11 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.renderer.setAttribute(this.document.body, "class", "theme-light")
+    this.renderer.setAttribute(this.document.body, "class", "theme-dark")
   }
 
   onSwitchedTheme(isDarkTheme:boolean){
-    const hostClass=isDarkTheme ? "theme-dark":"theme-light"
+    const hostClass=isDarkTheme ? "theme-light":"theme-dark"
     this.renderer.setAttribute(this.document.body,"class",hostClass)
 
   }

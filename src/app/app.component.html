@@ -1,10 +1,13 @@
 <div fxLayout="column" fxFlexFill>
+<!-- Header -->
   <app-header (themeSwitched)="onSwitchedTheme($event)"></app-header>
-  <mat-drawer-container fxFlex>
+<!-- Main content -->
+  <mat-drawer-container fxFlex fxLayoutGap>
     <mat-drawer-content>
-      <button mat-raised-button color="primary">
-        Does nothing
-      </button>
+<!-- Game library gridview -->
+      <gl-gridview></gl-gridview>
+<!--  -->
     </mat-drawer-content>
   </mat-drawer-container>
+<!--  -->
 </div>
