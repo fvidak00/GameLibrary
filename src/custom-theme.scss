@@ -23,6 +23,7 @@ $GameLibrary-theme: mat-light-theme((
   )
 ));
 
+// Possible fix
 
 // Dark theme
 $GameLibrary-dark-primary: mat-palette($mat-blue, 900);
@@ -48,5 +49,5 @@ $GameLibrary-theme-dark: mat-dark-theme((
 @include angular-material-theme($GameLibrary-theme);
 
 .theme-dark{
-  @include angular-material-theme($GameLibrary-theme-dark);
+  @include angular-material-color($GameLibrary-theme-dark);
 }
