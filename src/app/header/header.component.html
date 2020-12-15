@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  {{title}}
+  <span class="spacer"></span>
+  <span>
+    <mat-slide-toggle (change)="onChangeTheme($event)">{{currentTheme}}</mat-slide-toggle>
+  </span>
+</mat-toolbar>
