@@ -19,6 +19,5 @@ export class AppComponent implements OnInit{
   onSwitchedTheme(isDarkTheme:boolean){
     const hostClass=isDarkTheme ? "theme-light":"theme-dark"
     this.renderer.setAttribute(this.document.body,"class",hostClass)
-
   }
 }

@@ -10,18 +10,23 @@ import { Game } from "../models/game.model"
 export class GridviewComponent implements OnInit{
 // Grid size parameters
   public innerWidth:number=1
-  public itemWidth:number=200
+  public itemWidth:number=100
   public nItemsInRow:number=5
-  private nItems:number=0
 //
 // Setting dummy game items
-
+  private nItems:number=69
+  public dummyGameList:Game[]=[]
 //
 
   ngOnInit(){
 // Initial grid size
     this.innerWidth=window.innerWidth
     this.nItemsInRow=Math.floor(this.innerWidth/this.itemWidth)
+//
+// Inicializing dummy list
+    for(let i:number=0;i<this.nItems;i++){
+      this.dummyGameList.push({title:"LetsBePolite "+i, imagePath:"ImageSoonTM"})
+    }
 //
   }
 

@@ -1,13 +1,7 @@
 <mat-grid-list cols={{nItemsInRow}} rowHeight="1:1.333" gutterSize=0.5rem id="gamegrid">
-  <mat-grid-tile class="item">{{nItemsInRow}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{itemWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
-  <mat-grid-tile class="item">{{innerWidth}}</mat-grid-tile>
+<!-- Dummy items -->
+  <mat-grid-tile class="item" *ngFor="let item of dummyGameList">
+    {{item.imagePath}}<br>{{item.title}}
+  </mat-grid-tile>
+<!--  -->
 </mat-grid-list>
