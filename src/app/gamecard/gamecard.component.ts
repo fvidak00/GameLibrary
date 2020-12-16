@@ -10,4 +10,7 @@ import { Game } from "../models/game.model"
 export class GamecardComponent{
   public gameImage:string=""
 
+
+  onGameClicked(){
+  }
 }
