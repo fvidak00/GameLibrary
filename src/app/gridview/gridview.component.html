@@ -1,0 +1,11 @@
+<mat-grid-list cols={{nItemsInRow}} rowHeight="1:1.333" id="gamegrid">
+<!-- Dummy items -->
+  <!-- <mat-grid-tile class="item" *ngFor="let item of dummyGameList">
+    {{item.imagePath}}<br>{{item.title}}
+  </mat-grid-tile> -->
+
+  <mat-grid-tile class="item" *ngFor="let item of dummyGameList">
+    <gl-gamecard></gl-gamecard>
+  </mat-grid-tile>
+<!--  -->
+</mat-grid-list>

@@ -8,13 +8,13 @@ import { MatSlideToggleChange } from "@angular/material/slide-toggle";
 })
 export class HeaderComponent{
   title="GameLibrary"
-  currentTheme="Light"
+  currentTheme="Dark"
 
   @Output()
   readonly themeSwitched=new EventEmitter<boolean>()
 
   onChangeTheme({checked}:MatSlideToggleChange){
-    this.currentTheme=checked ? "Dark":"Light"
+    this.currentTheme=checked ? "Light":"Dark"
     this.themeSwitched.emit(checked)
   }
 }
