@@ -10,7 +10,7 @@ import { Game } from "../models/game.model"
 export class GridviewComponent implements OnInit{
 // Grid size parameters
   public innerWidth:number=1
-  public itemWidth:number=100
+  public itemWidth:number=200
   public nItemsInRow:number=5
 //
 // Setting dummy game items
